@@ -25,7 +25,7 @@ SECRET_KEY = ')ere$0*q5hps6z5fz8m75=yy3x!%ospy-7ncb^r34avyz)o8fm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['schooldio-D-django.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['schooldio-django.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'schooldio-D.urls'
+ROOT_URLCONF = 'schooldio.urls'
 
 TEMPLATES = [
     {
@@ -67,7 +67,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'schooldio-D.wsgi.application'
+WSGI_APPLICATION = 'schooldio.wsgi.application'
 
 
 # Database
