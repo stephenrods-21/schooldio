@@ -25,7 +25,7 @@ SECRET_KEY = ')ere$0*q5hps6z5fz8m75=yy3x!%ospy-7ncb^r34avyz)o8fm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['schooldio-django.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
