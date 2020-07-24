@@ -8,6 +8,10 @@ verify_ssl = true
 [packages]
 django = "*"
 gunicorn = "*"
+psycopg2-binary = "*"
+djangorestframework = "*"
+ipdb = "*"
+drf-nested-routers = "*"
 
 [requires]
 python_version = "3.8"
