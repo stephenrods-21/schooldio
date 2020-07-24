@@ -12,6 +12,8 @@ psycopg2-binary = "*"
 djangorestframework = "*"
 ipdb = "*"
 drf-nested-routers = "*"
+dj-database-url = "*"
+whitenoise = "*"
 
 [requires]
 python_version = "3.8"
