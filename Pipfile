@@ -14,6 +14,7 @@ ipdb = "*"
 drf-nested-routers = "*"
 dj-database-url = "*"
 whitenoise = "*"
+django-filter = "*"
 
 [requires]
 python_version = "3.8"
