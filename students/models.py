@@ -30,9 +30,6 @@ class Student(SoftDeletionModel):
         return f'{self.first_name} {self.last_name}'
 
     def clean(self):
-        import ipdb
-        ipdb.set_trace()
-
         if not self.school:
             raise ValidationError("School is required!")
 
