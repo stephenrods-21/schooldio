@@ -13,3 +13,11 @@ def build_nested_query(kwargs):
         raise serializers.ValidationError({"detail": "key not found"})
 
     return query
+
+
+def get_school_id_param(request, kwargs):
+    if 'school_pk' in kwargs:
+        school_id = int(kwargs['school_pk'])
+    else:
+        school_id = int(request.data['school'])
+    return school_id

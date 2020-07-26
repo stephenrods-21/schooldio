@@ -6,4 +6,4 @@ from schools.models import School
 class SchoolSerializer(serializers.ModelSerializer):
     class Meta:
         model = School
-        fields = ('id', 'name', 'max_students')
+        fields = ('id', 'name', 'max_students', 'image')

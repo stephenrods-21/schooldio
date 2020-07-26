@@ -7,8 +7,10 @@ from rest_framework.exceptions import ValidationError
 from commons.models import SoftDeletionModel
 from schools.models import School
 
+
 def upload_path(instance, filename):
     return '/'.join(['profile-pic', str(instance.first_name), filename])
+
 
 # Create your models here.
 class Student(SoftDeletionModel):
@@ -29,10 +31,6 @@ class Student(SoftDeletionModel):
 
     def __str__(self):
         return f'{self.first_name} {self.last_name}'
-
-    def clean(self):
-        if not self.school:
-            raise ValidationError("School is required!")
 
     def save(self, *args, **kwargs):
         self.student_number = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(20))

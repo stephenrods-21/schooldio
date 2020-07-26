@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block title %}<title>Local Library</title>{% endblock %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+          integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+            integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+            crossorigin="anonymous"></script>
+</head>
+<body id="page-top">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Schooldio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+        </div>
+    </div>
+</nav>
+
+<header class="bg-primary text-white">
+    <div class="container text-center">
+        <h1>Welcome to Schooldio api documentation</h1>
+        <p class="lead">Welcome to Schooldio api documentation</p>
+    </div>
+</header>
+
+<section id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2>Students</h2>
+                <p class="lead">Allows you to manage Student model.</p>
+                <strong>Fetches a list of all students.</strong>[GET, POST]<br/>
+                <a href="https://schooldio-django.herokuapp.com/api/students/" target="_blank">
+                    https://schooldio-django.herokuapp.com/api/students/</a><br/><br/>
+
+                <strong>Get a student detail.</strong>[GET, PUT, PATCH, DELETE]<br/>
+                 <small><i>https://schooldio-django.herokuapp.com/api/students/{pk}</i></small><br/>
+                <a href="https://schooldio-django.herokuapp.com/api/students/1" target="_blank">
+                    https://schooldio-django.herokuapp.com/api/students/1</a><br/><br/>
+
+                <strong>Fetches a list of all students those belonging to a particular school.</strong>[GET, POST]<br/>
+                <small><i>https://schooldio-django.herokuapp.com/api/schools/{school_pk}/students</i></small><br/>
+                <a href="https://schooldio-django.herokuapp.com/api/schools/1/students" target="_blank">
+                    https://schooldio-django.herokuapp.com/api/schools/1/students</a><br/><br/>
+
+                <strong>Get a student detail belonging to a particular school.</strong>[GET, PUT, PATCH, DELETE]<br/>
+                <small><i>https://schooldio-django.herokuapp.com/api/schools/{school_pk}/students/{pk}</i></small><br/>
+                <a href="https://schooldio-django.herokuapp.com/api/schools/1/students/2" target="_blank">
+                    https://schooldio-django.herokuapp.com/api/schools/1/students/2</a><br/><br/>
+
+                <hr/>
+
+                <h2>Schools</h2>
+                <p class="lead">Allows you to manage School model.</p>
+                <strong>Fetches a list of all schools.</strong>[GET, POST]<br/>
+                <a href="https://schooldio-django.herokuapp.com/api/schools/" target="_blank">
+                    https://schooldio-django.herokuapp.com/api/schools/</a><br/><br/>
+
+                <strong>Get a school detail.</strong>[GET, PUT, PATCH, DELETE]<br/>
+                <small><i>https://schooldio-django.herokuapp.com/api/schools/{pk}</i></small><br/>
+                <a href="https://schooldio-django.herokuapp.com/api/schools/1" target="_blank">
+                    https://schooldio-django.herokuapp.com/api/schools/1</a><br/><br/>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
