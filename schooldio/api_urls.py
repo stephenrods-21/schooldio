@@ -15,7 +15,6 @@ schools_router = routers.NestedSimpleRouter(router, r'schools', lookup='school')
 schools_router.register(r'students', StudentViewset)
 
 urlpatterns = [
-    url(r'^', include(router.urls)),
     url(r'^', include(schools_router.urls)),
 ]
 
