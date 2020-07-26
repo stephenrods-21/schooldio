@@ -1,8 +1,8 @@
 from django.core.exceptions import ObjectDoesNotExist
-from django.db.models import Q
-from django_filters.rest_framework import filters, DjangoFilterBackend
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets, status
 from rest_framework.filters import OrderingFilter
+from rest_framework.parsers import MultiPartParser, FormParser
 from rest_framework.response import Response
 
 from schools.models import School
@@ -14,6 +14,7 @@ from students.utils import build_nested_query
 
 class StudentViewset(viewsets.ModelViewSet):
     queryset = Student.objects.all()
+    parser_classes = (MultiPartParser, FormParser)
     serializer_class = StudentSerializer
     filterset_class = StudentSearchFilter  # here
     filter_backends = (DjangoFilterBackend, OrderingFilter)
@@ -47,7 +48,7 @@ class StudentViewset(viewsets.ModelViewSet):
             return Response({'error_msg': 'Max capacity reached'}, status=status.HTTP_406_NOT_ACCEPTABLE)
 
         new_student = Student.objects.create(first_name=student_data['first_name'], last_name=student_data['last_name'],
-                                             school_id=school_id)
+                                             school_id=school_id, image=student_data['image'])
         new_student.clean()
         new_student.save()
 

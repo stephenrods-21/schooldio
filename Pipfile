@@ -16,6 +16,7 @@ dj-database-url = "*"
 whitenoise = "*"
 django-filter = "*"
 django-cors-headers = "*"
+pillow = "*"
 
 [requires]
 python_version = "3.8"

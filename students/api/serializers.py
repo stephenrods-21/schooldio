@@ -8,6 +8,6 @@ class StudentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Student
-        fields = ('id', 'first_name', 'last_name', 'student_number', 'year_in_school', 'school')
+        fields = ('id', 'first_name', 'last_name', 'student_number', 'year_in_school', 'school', 'image')
         read_only_fields = ['student_number',]
 
